@@ -35,6 +35,8 @@ function toggleMode() {
         toggleBtn.style.background = "darkgrey";
         description.textContent = "Welcome to the Dark Side";
         toggleBtn.textContent = "Switch to Light";
+        Image.src = "darkPmg"
+        emoji.classList.remove("emoji-anim");
 
     }
     else {
@@ -46,6 +48,8 @@ function toggleMode() {
         toggleBtn.style.background = "lightgrey";
         description.textContent = "Welcome to the Light Side";
         toggleBtn.textContent = "Switch to Dark";
+        Image.src = "light.png";
+        emoji.classList.remove("emoji-anim");
     }
 
 }
@@ -68,10 +72,15 @@ function setHackerMode() {
 
 
 const rainbowBtn = document.querySelector("#rainbow");
+const emoji = document.querySelector("#emoji");
+
 rainbowBtn.addEventListener("click", setRainbowMode);
 function setRainbowMode() {
     body.style.background = "linear-gradient(red, orange, yellow, green, blue, purple)";
     body.style.fontFamily = "copperplate";
     description.style.color = "rgb(0, 0, 0)";
     description.textContent = "RAINBOW BLAST!";
+
+//Attaching ANIMATION:
+emoji.classList.add("emoji-anim");
 }

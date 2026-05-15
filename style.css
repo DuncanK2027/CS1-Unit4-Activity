@@ -1,1 +1,23 @@
 
+#emoji {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0
+    font-size: 30px;
+}
+.emoji-anim {
+    opacity: 1 !important;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rainbow {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(200px. 200x); }
+    50% { transform: translate(200px, 200px); }
+    75% { transform: translate(0px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
